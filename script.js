@@ -8,9 +8,9 @@ btn.addEventListener("click", function(){
 })
 
 async function printAfterDelay(input, delay){
-	return await new Promise((req,res) => {
-		res(setTimeout(() => {
-			outPrint.innerText = `${input}`
-		},delay))
-	})
+	return await new Promise((req,res) => setTimeout(() => res(
+		outPrint.innerText = `${input}`
+	),delay))
+
+
 }
